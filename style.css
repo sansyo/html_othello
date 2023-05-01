@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.info span {
+  font-size: 24px;
+}
+
+.container {
+  text-align: center;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(8, 100px);
+  gap: 5px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #4caf50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.cell:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.cell[data-cell="black"]:before {
+  background-color: black;
+}
+
+.cell[data-cell="white"]:before {
+  background-color: white;
+}
